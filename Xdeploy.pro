@@ -11,7 +11,5 @@ SOURCES += main.cpp \
     xdeploy.cpp
 
 HEADERS += \
-    xdeploy \
-    xdeploy \
     xdeploy.h
 
