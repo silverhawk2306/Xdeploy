@@ -43,5 +43,5 @@ void XDeploy::deploy(QString sourcePath, QString destPath)
     }
 
     qDebug() << "end process";
-    qApp->exit(0);
+    exit(0);
 }
