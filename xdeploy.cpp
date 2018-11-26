@@ -1,5 +1,6 @@
 #include "xdeploy.h"
 #include <QDebug>
+#include <QCoreApplication>
 
 XDeploy::XDeploy(QObject *parent) : QObject(parent)
 {
@@ -43,4 +44,5 @@ void XDeploy::deploy(QString sourcePath, QString destPath)
     }
 
     qDebug() << "end process";
+    QCoreApplication::exit();
 }
