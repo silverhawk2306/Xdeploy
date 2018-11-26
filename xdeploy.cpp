@@ -33,7 +33,7 @@ void XDeploy::deploy(QString sourcePath, QString destPath)
                 //qDebug() << "copy <<<"<<array[j]<< "to "<<destPath;
 //                QFile::copy("/path/file", "/path/copy-of-file");
                 QString cmd("sudo cp ");
-                cmd.append(sourcePath);
+                cmd.append(array[j]);
                 cmd.append(" ");
                 cmd.append(destPath);
                 qDebug() << cmd;
