@@ -30,11 +30,13 @@ void XDeploy::deploy(QString sourcePath, QString destPath)
         QStringList array = libs[i].split(" ");
         for(int j = 0; j < array.length(); j++) {
             if(!array[j].contains("(") && array[j] != "") {
-                qDebug() << "copy <<<"<<array[j]<< "to "<<destPath;
+                //qDebug() << "copy <<<"<<array[j]<< "to "<<destPath;
+//                QFile::copy("/path/file", "/path/copy-of-file");
                 QString cmd("sudo cp ");
                 cmd.append(sourcePath);
                 cmd.append(" ");
                 cmd.append(destPath);
+                qDebug() << cmd;
                 this->process.execute(cmd);
             }
         }
