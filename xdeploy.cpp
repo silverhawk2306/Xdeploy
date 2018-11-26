@@ -25,7 +25,6 @@ void XDeploy::deploy(QString sourcePath, QString destPath)
         }
     }
 
-    qDebug() << "libs: "<<libs;
     QStringList libPaths;
     for(int i = 0; i<libs.length(); i++) {
         QStringList array = libs[i].split(" ");
@@ -44,5 +43,5 @@ void XDeploy::deploy(QString sourcePath, QString destPath)
     }
 
     qDebug() << "end process";
-    QCoreApplication::exit();
+    qApp->exit(0);
 }
